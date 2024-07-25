@@ -28,7 +28,7 @@ ICA/
 
 └── .gitignore
 
-
+```
 
 - **`data/`**: Contains the data files required for analysis.
   - `medidas.txt`: File with air quality measurements.
@@ -53,85 +53,105 @@ The script requires Python and the `matplotlib` library. You can install the dep
 
 ```bash
 pip install -r requirements.txt
-The requirements.txt file should contain:
+```
 
+The `requirements.txt` file should contain:
 
+```
 matplotlib
-Data Files
+```
+
+## Data Files
+
 The script uses two CSV data files:
 
-data/medidas.txt: Contains air quality measurements. Each line should follow the format:
+1. **`data/medidas.txt`**: Contains air quality measurements. Each line should follow the format:
 
-date,so,pm10,pm25
-Where:
+   ```
+   date,so,pm10,pm25
+   ```
 
-date: The date of the measurement.
-so: Sulfur dioxide (SO₂) measurement.
-pm10: Particulate matter with diameter less than 10 micrometers.
-pm25: Particulate matter with diameter less than 2.5 micrometers.
-data/rangos.txt: Defines air quality ranges. Each line should follow the format:
+   Where:
+   - `date`: The date of the measurement.
+   - `so`: Sulfur dioxide (SO₂) measurement.
+   - `pm10`: Particulate matter with diameter less than 10 micrometers.
+   - `pm25`: Particulate matter with diameter less than 2.5 micrometers.
 
+2. **`data/rangos.txt`**: Defines air quality ranges. Each line should follow the format:
 
-quality,so2min,so2max,pm10min,pm10max,p25min,p25max
-Where:
+   ```
+   quality,so2min,so2max,pm10min,pm10max,p25min,p25max
+   ```
 
-quality: Classification of air quality.
-so2min and so2max: Range for SO₂.
-pm10min and pm10max: Range for PM10.
-p25min and p25max: Range for PM2.5.
-Usage
-Set Up the Environment:
+   Where:
+   - `quality`: Classification of air quality.
+   - `so2min` and `so2max`: Range for SO₂.
+   - `pm10min` and `pm10max`: Range for PM10.
+   - `p25min` and `p25max`: Range for PM2.5.
 
-Ensure you are in the root directory of the project (ICA/). If using a virtual environment, activate it.
+## Usage
 
-Run the Script:
+1. **Set Up the Environment:**
 
-Navigate to the src/ directory and run the ICA.py script:
+   Ensure you are in the root directory of the project (`ICA/`). If using a virtual environment, activate it.
 
-cd src
-python ICA.py
-Provide File Names:
+2. **Run the Script:**
 
-The script will prompt for data file names. You can press Enter to accept the default values (data/medidas.txt and data/rangos.txt) or enter different file names.
+   Navigate to the `src/` directory and run the `ICA.py` script:
 
-Select Menu Options:
+   ```bash
+   cd src
+   python ICA.py
+   ```
 
-After loading the files, the script will display a menu with the following options:
+3. **Provide File Names:**
 
-medidas: Displays the air quality measurements.
-rangos: Displays the air quality ranges.
-calidad: Evaluates and displays the air quality for each measurement based on the provided ranges.
-grafica: Shows a graph of SO₂, PM10, and PM2.5 measurements.
-salir: Exits the program.
-Functions
-mostrar_titulo(): Displays the program title.
+   The script will prompt for data file names. You can press Enter to accept the default values (`data/medidas.txt` and `data/rangos.txt`) or enter different file names.
 
-recuperar_rangos(nombre_archivo): Reads air quality ranges from a CSV file.
+4. **Select Menu Options:**
 
-imprimir_rangos(rangos): Prints air quality ranges in a tabular format.
+   After loading the files, the script will display a menu with the following options:
+   - `medidas`: Displays the air quality measurements.
+   - `rangos`: Displays the air quality ranges.
+   - `calidad`: Evaluates and displays the air quality for each measurement based on the provided ranges.
+   - `grafica`: Shows a graph of SO₂, PM10, and PM2.5 measurements.
+   - `salir`: Exits the program.
 
-recuperar_medidas(nombre_archivo): Reads air quality measurements from a CSV file.
+## Functions
 
-imprimir_medidas(medidas): Prints air quality measurements in a tabular format.
+- **`mostrar_titulo()`**: Displays the program title.
 
-getRangoSO(so, rangos): Determines the air quality for a given SO₂ measurement.
+- **`recuperar_rangos(nombre_archivo)`**: Reads air quality ranges from a CSV file.
 
-getRangoPM10(pm10, rangos): Determines the air quality for a given PM10 measurement.
+- **`imprimir_rangos(rangos)`**: Prints air quality ranges in a tabular format.
 
-getRangoPM25(pm25, rangos): Determines the air quality for a given PM2.5 measurement.
+- **`recuperar_medidas(nombre_archivo)`**: Reads air quality measurements from a CSV file.
 
-testear_calidad(medidas, rangos): Evaluates and displays air quality for all measurements based on the ranges.
+- **`imprimir_medidas(medidas)`**: Prints air quality measurements in a tabular format.
 
-graficas(medidas, rangos): Generates and displays graphs of SO₂, PM10, and PM2.5 measurements.
+- **`getRangoSO(so, rangos)`**: Determines the air quality for a given SO₂ measurement.
 
-pedir_ficheros(): Prompts the user for data file names.
+- **`getRangoPM10(pm10, rangos)`**: Determines the air quality for a given PM10 measurement.
 
-menuPrincipal(): Displays the main menu and returns the selected option by the user.
+- **`getRangoPM25(pm25, rangos)`**: Determines the air quality for a given PM2.5 measurement.
 
-ejecutar_opcion(medidas, rangos, opcion): Executes the option selected by the user.
+- **`testear_calidad(medidas, rangos)`**: Evaluates and displays air quality for all measurements based on the ranges.
 
-Contributing
+- **`graficas(medidas, rangos)`**: Generates and displays graphs of SO₂, PM10, and PM2.5 measurements.
+
+- **`pedir_ficheros()`**: Prompts the user for data file names.
+
+- **`menuPrincipal()`**: Displays the main menu and returns the selected option by the user.
+
+- **`ejecutar_opcion(medidas, rangos, opcion)`**: Executes the option selected by the user.
+
+## Contributing
+
 If you want to contribute to the project, please fork the repository, make your changes, and submit a pull request with a detailed description of your modifications.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+```
+
+Con esta estructura, cada sección está claramente definida y el contenido está bien organizado para facilitar su lectura en GitHub.
