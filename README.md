@@ -1,4 +1,4 @@
-# ICA
+# Air Quality Analyzer (ICA)
 
 ## Descripction
 
@@ -27,6 +27,7 @@ ICA/
 ├── README.md
 
 └── .gitignore
+
 
 
 - **`data/`**: Contains the data files required for analysis.
