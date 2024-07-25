@@ -10,7 +10,9 @@ El Analizador de Calidad del Aire (ICA) es una herramienta en Python para analiz
 
 ICA/
 ├── data/
+
 │ ├── medidas.txt
+
 │ └── rangos.txt
 ├── entorno_ICA/
 ├── src/
