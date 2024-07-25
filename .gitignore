@@ -151,6 +151,8 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+#enviroment
+entorno_ICA/
 # Cython debug symbols
 cython_debug/
 
