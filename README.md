@@ -154,4 +154,3 @@ If you want to contribute to the project, please fork the repository, make your 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 ```
 
-Con esta estructura, cada sección está claramente definida y el contenido está bien organizado para facilitar su lectura en GitHub.
