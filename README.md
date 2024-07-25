@@ -1,10 +1,8 @@
 # ICA
+
+## Descripction
+
 The Air Quality Analysis Tool is a Python program that allows analyzing air quality data from CSV files. It provides functionalities to print detailed reports, evaluate air quality in different predefined ranges and generate visual graphs of the measurements, thus facilitating air pollution monitoring and analysis.
-# Analizador de Calidad del Aire (ICA)
-
-## Descripción
-
-El Analizador de Calidad del Aire (ICA) es una herramienta en Python para analizar y visualizar datos de calidad del aire. El script permite cargar mediciones desde archivos, evaluar la calidad del aire basándose en rangos predefinidos, y generar gráficos de los datos de calidad del aire.
 
 ## Project Structure
 
@@ -30,8 +28,6 @@ ICA/
 
 └── .gitignore
 
-vbnet
-Copiar código
 
 - **`data/`**: Contains the data files required for analysis.
   - `medidas.txt`: File with air quality measurements.
@@ -58,15 +54,13 @@ The script requires Python and the `matplotlib` library. You can install the dep
 pip install -r requirements.txt
 The requirements.txt file should contain:
 
-Copiar código
+
 matplotlib
 Data Files
 The script uses two CSV data files:
 
 data/medidas.txt: Contains air quality measurements. Each line should follow the format:
 
-bash
-Copiar código
 date,so,pm10,pm25
 Where:
 
@@ -76,7 +70,7 @@ pm10: Particulate matter with diameter less than 10 micrometers.
 pm25: Particulate matter with diameter less than 2.5 micrometers.
 data/rangos.txt: Defines air quality ranges. Each line should follow the format:
 
-Copiar código
+
 quality,so2min,so2max,pm10min,pm10max,p25min,p25max
 Where:
 
@@ -93,8 +87,6 @@ Run the Script:
 
 Navigate to the src/ directory and run the ICA.py script:
 
-bash
-Copiar código
 cd src
 python ICA.py
 Provide File Names:
