@@ -168,14 +168,18 @@ If you want to contribute to the project, please fork the repository, make your 
 This project is licensed under the MIT License. See the LICENSE file for details.
 ```
 
-### Notas Adicionales
 
-1. **Environments Directory**: La sección `entorno_ICA/` se incluye en el `.gitignore` para evitar que el entorno virtual se suba al repositorio. Asegúrate de que esta sección sea opcional en la documentación.
+### Additional Notes
 
-2. **Instalación y Uso**: Los pasos para configurar y activar el entorno virtual se detallan para una experiencia de desarrollo más limpia.
+1. **Environments Directory**: The `environment_ICA/` section is included in the `.gitignore` to prevent the virtual environment from being uploaded to the repository. Make sure this section is optional in the documentation.
 
-3. **Archivos y Funcionalidades**: Asegúrate de que los detalles sobre los archivos de datos y las funcionalidades del script estén claros para los usuarios.
+2. **Installation and Usage**: The steps to configure and activate the virtual environment are detailed for a cleaner development experience.
 
-Si necesitas más ajustes o tienes alguna otra pregunta, no dudes en decírmelo. ¡Estoy aquí para ayudar!
+3. **Files and Functionalities**: Make sure that details about data files and script functionalities are clear to users.
+
+If you need more tweaks or have any other questions, feel free to let me know - I'm here to help!
+
+
+Translated with DeepL.com (free version)
 
 
