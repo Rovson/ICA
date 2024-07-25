@@ -168,7 +168,6 @@ If you want to contribute to the project, please fork the repository, make your 
 This project is licensed under the MIT License. See the LICENSE file for details.
 ```
 
-
 ### Additional Notes
 
 1. **Environments Directory**: The `environment_ICA/` section is included in the `.gitignore` to prevent the virtual environment from being uploaded to the repository. Make sure this section is optional in the documentation.
@@ -178,8 +177,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 3. **Files and Functionalities**: Make sure that details about data files and script functionalities are clear to users.
 
 If you need more tweaks or have any other questions, feel free to let me know - I'm here to help!
-
-
-Translated with DeepL.com (free version)
-
-
