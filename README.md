@@ -65,84 +65,98 @@ matplotlib
 
 The script uses two CSV data files:
 
-1. **`data/medidas.txt`**: Contains air quality measurements. Each line should follow the format:
+- **`data/medidas.txt`**: Contains air quality measurements. Each line should follow the format:
 
-   ```
-   date,so,pm10,pm25
-   ```
+  ```
+  date,so,pm10,pm25
+  ```
 
-   Where:
-   - `date`: The date of the measurement.
-   - `so`: Sulfur dioxide (SO₂) measurement.
-   - `pm10`: Particulate matter with diameter less than 10 micrometers.
-   - `pm25`: Particulate matter with diameter less than 2.5 micrometers.
+  Where:
+  - `date`: The date of the measurement.
+  - `so`: Sulfur dioxide (SO₂) measurement.
+  - `pm10`: Particulate matter with a diameter less than 10 micrometers.
+  - `pm25`: Particulate matter with a diameter less than 2.5 micrometers.
 
-2. **`data/rangos.txt`**: Defines air quality ranges. Each line should follow the format:
+- **`data/rangos.txt`**: Defines air quality ranges. Each line should follow the format:
 
-   ```
-   quality,so2min,so2max,pm10min,pm10max,p25min,p25max
-   ```
+  ```
+  quality,so2min,so2max,pm10min,pm10max,p25min,p25max
+  ```
 
-   Where:
-   - `quality`: Classification of air quality.
-   - `so2min` and `so2max`: Range for SO₂.
-   - `pm10min` and `pm10max`: Range for PM10.
-   - `p25min` and `p25max`: Range for PM2.5.
+  Where:
+  - `quality`: Classification of air quality.
+  - `so2min` and `so2max`: Range for SO₂.
+  - `pm10min` and `pm10max`: Range for PM10.
+  - `p25min` and `p25max`: Range for PM2.5.
 
 ## Usage
 
-1. **Set Up the Environment:**
+### Set Up the Environment
 
-   Ensure you are in the root directory of the project (`ICA/`). If using a virtual environment, activate it.
+1. **Create and Activate the Virtual Environment** (optional but recommended):
 
-2. **Run the Script:**
-
-   Navigate to the `src/` directory and run the `ICA.py` script:
+   Navigate to the root directory of the project (ICA/) and create a virtual environment:
 
    ```bash
-   cd src
-   python ICA.py
+   python -m venv entorno_ICA
    ```
 
-3. **Provide File Names:**
+   Activate the virtual environment:
 
-   The script will prompt for data file names. You can press Enter to accept the default values (`data/medidas.txt` and `data/rangos.txt`) or enter different file names.
+   - **On Windows**:
+     ```bash
+     entorno_ICA\Scripts\activate
+     ```
+   - **On macOS/Linux**:
+     ```bash
+     source entorno_ICA/bin/activate
+     ```
 
-4. **Select Menu Options:**
+2. **Install Dependencies**:
 
-   After loading the files, the script will display a menu with the following options:
-   - `medidas`: Displays the air quality measurements.
-   - `rangos`: Displays the air quality ranges.
-   - `calidad`: Evaluates and displays the air quality for each measurement based on the provided ranges.
-   - `grafica`: Shows a graph of SO₂, PM10, and PM2.5 measurements.
-   - `salir`: Exits the program.
+   Install the required libraries using:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Run the Script
+
+Navigate to the `src/` directory and run the `ICA.py` script:
+
+```bash
+cd src
+python ICA.py
+```
+
+### Provide File Names
+
+The script will prompt for data file names. You can press Enter to accept the default values (`data/medidas.txt` and `data/rangos.txt`) or enter different file names.
+
+### Select Menu Options
+
+After loading the files, the script will display a menu with the following options:
+
+- **medidas**: Displays the air quality measurements.
+- **rangos**: Displays the air quality ranges.
+- **calidad**: Evaluates and displays the air quality for each measurement based on the provided ranges.
+- **grafica**: Shows a graph of SO₂, PM10, and PM2.5 measurements.
+- **salir**: Exits the program.
 
 ## Functions
 
 - **`mostrar_titulo()`**: Displays the program title.
-
 - **`recuperar_rangos(nombre_archivo)`**: Reads air quality ranges from a CSV file.
-
 - **`imprimir_rangos(rangos)`**: Prints air quality ranges in a tabular format.
-
 - **`recuperar_medidas(nombre_archivo)`**: Reads air quality measurements from a CSV file.
-
 - **`imprimir_medidas(medidas)`**: Prints air quality measurements in a tabular format.
-
 - **`getRangoSO(so, rangos)`**: Determines the air quality for a given SO₂ measurement.
-
 - **`getRangoPM10(pm10, rangos)`**: Determines the air quality for a given PM10 measurement.
-
 - **`getRangoPM25(pm25, rangos)`**: Determines the air quality for a given PM2.5 measurement.
-
 - **`testear_calidad(medidas, rangos)`**: Evaluates and displays air quality for all measurements based on the ranges.
-
 - **`graficas(medidas, rangos)`**: Generates and displays graphs of SO₂, PM10, and PM2.5 measurements.
-
 - **`pedir_ficheros()`**: Prompts the user for data file names.
-
 - **`menuPrincipal()`**: Displays the main menu and returns the selected option by the user.
-
 - **`ejecutar_opcion(medidas, rangos, opcion)`**: Executes the option selected by the user.
 
 ## Contributing
@@ -151,6 +165,17 @@ If you want to contribute to the project, please fork the repository, make your 
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
+```
+
+### Notas Adicionales
+
+1. **Environments Directory**: La sección `entorno_ICA/` se incluye en el `.gitignore` para evitar que el entorno virtual se suba al repositorio. Asegúrate de que esta sección sea opcional en la documentación.
+
+2. **Instalación y Uso**: Los pasos para configurar y activar el entorno virtual se detallan para una experiencia de desarrollo más limpia.
+
+3. **Archivos y Funcionalidades**: Asegúrate de que los detalles sobre los archivos de datos y las funcionalidades del script estén claros para los usuarios.
+
+Si necesitas más ajustes o tienes alguna otra pregunta, no dudes en decírmelo. ¡Estoy aquí para ayudar!
 
 
